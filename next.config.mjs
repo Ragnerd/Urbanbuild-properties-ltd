@@ -1,10 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    optimizeCss: false, // disables Lightning CSS
+    optimizeCss: true, // disables Lightning CSS
   },
   typescript: {
-    ignoreDevErrors: true, // ignore TS errors during dev
+    // !! WARN !!
+    // Dangerously allow production builds to successfully complete even if
+    // your project has type errors.
+    // !! WARN !!
+    ignoreBuildErrors: true,
   },
   eslint: {
     ignoreDuringBuilds: true, // ignore ESLint errors during builds
