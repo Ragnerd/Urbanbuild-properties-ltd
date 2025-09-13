@@ -1,9 +1,37 @@
-import { RiPhoneFill, RiMainFill } from "react-icons/ri";
+import { RiPhoneFill, RiMailFill } from "react-icons/ri";
+import Socials from "./Socials";
 
 const Topbar = () => {
   return (
-    <section id="home" className="py-4 xl:h-16">
-      <div className="container mx-auto">Topbar</div>
+    <section
+      id="home"
+      className="py-4 xl:h-16 xl:py-0 bg-gradient-to-t from-[#ffc221] to-[#ffd76e] flex items-center"
+    >
+      <div className="container mx-auto">
+        {/* phone, mail & socials */}
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+          <div className="hidden xl:flex items-center gap-8">
+            {/* phone */}
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 bg-primary text-white flex items-center justify-center">
+                <RiPhoneFill />
+              </div>
+              <p className="font-medium text-primary">+1 (555) 000-0000</p>
+            </div>
+            {/* mail */}
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 bg-primary text-white flex items-center justify-center">
+                <RiMailFill />
+              </div>
+              <p className="font-medium text-primary">mail@gmail.com</p>
+            </div>
+          </div>
+          {/* socials */}
+          <div>
+            <Socials />
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
